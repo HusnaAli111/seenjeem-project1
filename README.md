@@ -1,4 +1,4 @@
-# اختر صح
+# seenjeem 
 
 ## User Stories
 1. As a player , I want to see a welcome section to know how to start the game

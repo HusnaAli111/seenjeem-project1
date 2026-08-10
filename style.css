@@ -11,7 +11,7 @@ body {
 
 }
 .background{
-     height: 450px;
+     height: 550px;
 
     background: linear-gradient(
         90deg,
@@ -51,7 +51,7 @@ body {
     text-decoration: none;
     font-size: 20px;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-    font-family: 'impact';
+    font-family: 'britannic';
     
 }
 
@@ -77,4 +77,16 @@ body {
     .hamburger{
         display: block;
     }
+}
+.background h1{
+    color: white;
+    font-family: 'britannic';
+    font-size: 50px;
+    padding-left: 450px;
+    padding-top: 130px;
+}
+.background p{
+    color: white;
+    font-size: 20px;
+    padding-left: 350px;
 }

@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    /* removes any default spacing that the browser does */
+}
+.navbar {
+    background: #EFEFEF;
+    padding: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.background{
+     height: 450px;
+
+    background: linear-gradient(
+        90deg,
+        #ff1e1e 0%,
+        #efb46b 100%
+    );
+    /* this blends two color with each other starts from the left which is #ff1e1e which start solid with 0% till the yellow and the 90deg so it sarts from the left to the right */
+
+    border-bottom-left-radius: 50% 15%;
+    border-bottom-right-radius: 50% 15%;
+}
+.logo{
+    /* background-color: orange; */
+    width: 55px;
+    /* height: 20%; */
+    
+
+}
+.logo img{
+    width: 100%;
+    height: 10%;
+
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.nav-links li {
+    display: block;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'impact';
+    
+}
+
+.nav-links a:hover{
+    color: white;
+    background-color: #A90000;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.hamburger{
+    display: none;
+}
+/* when the screen goes below the this number app;y the styling */
+
+
+@media(max-width: 400px){
+    .nav-links{
+        display: none;
+        padding-left: 50px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+}

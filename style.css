@@ -263,4 +263,44 @@ body {
     background-color: #A90000;
     background: #A90000;
 }
+/* //////////////////////////////////////////////////////////////////////////// */
+/* board page */
+.navbar-board {
+    background: linear-gradient(
+        90deg,
+        #ff1e1e 0%,
+        #efb46b 100%
+    );
+    padding: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.nav-links-board {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.nav-links-board li {
+    display: block;
+}
+
+.nav-links-board a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'britannic';
+    
+}
+
+.nav-links-board a:hover{
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+}
 

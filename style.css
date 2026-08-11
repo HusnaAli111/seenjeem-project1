@@ -119,14 +119,21 @@ body {
     padding-left: 350px;
 
 }
+
 .bahrain-category{
     background-color: grey;
     width: 90%;
+    height: 450px;
     /* height: 100%; */
     /* padding-left: 350px; */
     margin-left: 70px;
     border-radius: 10px;
     
+}
+.bahrain-cards{
+    display: flex;
+    justify-content:space-around;
+    gap: 10px;
 }
 .bahrain-category button{
     color: white;
@@ -141,11 +148,98 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
     
+    
 
 }
 .bahrain-q1{
-    border: 2px black;
+    width: 170px;
+    height: 250px;
+    border: solid black 2px;
     border-radius: 10px;
-    width:30px;
-    height: 50px;
+    background-color:#FF7546;
+    
+    
+}
+.bahrain-q1 img{
+    /* border: 2px black; */
+    border-radius: 10px;
+    width:170px;
+    height: 180px;
+    /* padding-left: 30px; */
+}
+.bahrain-q1-h2{
+    font-family: 'britannic';
+    background-color: #FF7546;
+    color: white;
+    padding-left: 20px;
+    font-size: 14px;
+}
+.bahrain-q2{
+    width: 170px;
+    height: 250px;
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: #FF7546;
+    
+}
+.bahrain-q2 img{
+    /* border: 2px black; */
+    border-radius: 10px;
+    width:170px;
+    height: 180px;
+    /* padding-left: 30px; */
+}
+.bahrain-q2-h2{
+    font-family: 'britannic';
+    background-color: #FF7546;
+    color: white;
+    padding-left: 20px;
+    font-size: 14px;
+
+}
+.bahrain-q3{
+    width: 170px;
+    height: 250px;
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: #FF7546;
+    
+}
+.bahrain-q3 img{
+    /* border: 2px black; */
+    border-radius: 10px;
+    width:170px;
+    height: 180px;
+    /* padding-left: 30px; */
+}
+.bahrain-q3-h2{
+    font-family: 'britannic';
+    background-color: #FF7546;
+    color: white;
+    padding-left: 45px;
+    font-size: 14px;
+
+}
+.bahrain-q4{
+    width: 170px;
+    height: 250px;
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: #FF7546;
+    
+}
+.bahrain-q4 img{
+    /* border: 2px black; */
+    border-radius: 10px;
+    width:170px;
+    height: 180px;
+    /* padding-left: 30px; */
+}
+.bahrain-q4-h2{
+    font-family: 'britannic';
+    background-color: #FF7546;
+    color: white;
+    padding-left: 10px;
+    font-size: 14px;
+
 }

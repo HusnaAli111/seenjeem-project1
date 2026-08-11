@@ -91,7 +91,6 @@ body {
     padding-left: 350px;
 }
 .start-button{
-   color: white;
    padding: 10px;
    border-radius: 30px;
    border: none;
@@ -101,6 +100,7 @@ body {
 
     margin-left: 540px;
     margin-top: 30px;
+    
 }
 .start-button:hover{
     color: white;
@@ -121,7 +121,7 @@ body {
 }
 
 .bahrain-category{
-    background-color: grey;
+    background-color:#F4F4F4;
     width: 90%;
     height: 450px;
     /* height: 100%; */
@@ -140,9 +140,9 @@ body {
    padding: 10px;
    border-radius: 30px;
    border: none;
-   color: black;
    font-size: 28px;
    font-family:'britannic' ;
+   background-color: #FF8140;
 
     margin-left: 470px;
     margin-top: 30px;
@@ -243,3 +243,24 @@ body {
     font-size: 14px;
 
 }
+.play-button button{
+   padding: 20px;
+   border-radius: 30px;
+   border: none;
+   color: white;
+    background: linear-gradient(
+        90deg,
+        #ff1e1e 0%,
+        #efb46b 100%
+    );
+    margin-left: 550px;
+    font-size: 18px;
+   font-family:'britannic' ; 
+   
+   
+}
+.play-button button:hover{
+    background-color: #A90000;
+    background: #A90000;
+}
+

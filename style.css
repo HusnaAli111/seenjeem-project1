@@ -78,6 +78,13 @@ body {
         display: block;
     }
 }
+.sidebar{
+    height:100px;
+     width:100px;
+      position: absolute; 
+      right:0; 
+      background-color: aqua;
+}
 .background h1{
     color: white;
     font-family: 'britannic';

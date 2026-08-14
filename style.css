@@ -514,4 +514,13 @@ font-family:'britannic';
     align-items: center;
     background-color: white;
 }
+.game{
+    display: none;
+}
+.answer{
+    display: none;
+}
+.bottom-bar2{
+    display: none;
+}
 

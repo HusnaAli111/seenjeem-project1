@@ -15,7 +15,10 @@ const bahrainq4Element = document.querySelectorAll('.bahrain-q4')
 const selectedCategoryElement = document.querySelector('#selectedCategories')
 
 // now for the board
-const categorynameElement=document.querySelector('.category-name')
+const categorynameElement=document.querySelectorAll('.category-name')
+const cardscontainerElement=document.querySelector('.cards-container')
+const bottombarElement=document.querySelector('.bottom-bar')
+const playbuttonElement=document.querySelector('.play-button button')
 
 /*-------------------------------- Functions --------------------------------*/
 function clickplay(event){
@@ -35,14 +38,21 @@ function clickplay(event){
 
 
 }
-// function board(){
-//     for (let i = 0; i < categorynameElement.length; i++) {
-//         categoryNameElements[i] = selectCategories[i]
-//     }
+function board(){
+    if (selectCategories.length<4){
+        console.log('4 only')
+        return
+    }
+    for (let i = 0; i < categorynameElement.length; i++) {
+    categorynameElement[i].textContent = selectCategories[i]
+}
+    cardscontainerElement.style.display = 'flex'
+    bottombarElement.style.display = 'flex'
+   
+    }
 
-// }
 
-// board()
+
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -58,6 +68,7 @@ bahrainq3Element.forEach(function(card) {
 bahrainq4Element.forEach(function(card) {
     card.addEventListener('click', clickplay)
 })
+playbuttonElement.addEventListener('click', board)
 
 
 

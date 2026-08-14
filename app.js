@@ -12,8 +12,10 @@ const bahrainq2Element = document.querySelectorAll('.bahrain-q2')
 const bahrainq3Element = document.querySelectorAll('.bahrain-q3')
 const bahrainq4Element = document.querySelectorAll('.bahrain-q4')
 
-
 const selectedCategoryElement = document.querySelector('#selectedCategories')
+
+// now for the board
+const categorynameElement=document.querySelector('.category-name')
 
 /*-------------------------------- Functions --------------------------------*/
 function clickplay(event){
@@ -33,6 +35,15 @@ function clickplay(event){
 
 
 }
+// function board(){
+//     for (let i = 0; i < categorynameElement.length; i++) {
+//         categoryNameElements[i] = selectCategories[i]
+//     }
+
+// }
+
+// board()
+
 
 /*----------------------------- Event Listeners -----------------------------*/
 bahrainq1Element.forEach(function(card) {

@@ -467,4 +467,10 @@ body {
 font-family:'britannic';
 
 }
+.cards-container{
+    display: none;
+}
+.bottom-bar{
+    display: none;
+}
 

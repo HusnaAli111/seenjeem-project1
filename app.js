@@ -1,9 +1,18 @@
 console.log('test seenjeem')
 /*-------------------------------- Constants --------------------------------*/
+const questions=[
+    {points: 200,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'},
+    {points: 200,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'},
+    {points: 400,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'},
+    {points: 400,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'},
+    {points: 600,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'},
+    {points: 600,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'}
 
+]
 
 /*---------------------------- Variables (state) ----------------------------*/
 let selectCategories=[]
+
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -50,6 +59,7 @@ function board(){
     bottombarElement.style.display = 'flex'
    
     }
+    // click the question function
 
 
 

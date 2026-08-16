@@ -1,15 +1,53 @@
 console.log('test seenjeem')
 /*-------------------------------- Constants --------------------------------*/
-const questions=[
-    {points: 200,questions:'what is the 200??',choices:['a2','b2','c2'],correctanswer:'a'},
-    {points: 200,questions:'what is the 200/200??',choices:['a3','b3','c3'],correctanswer:'a'},
-    {points: 400,questions:'what is the 400??',choices:['a4','b','c'],correctanswer:'a'},
-    {points: 400,questions:'what is the 400/400??',choices:['a5','b','c'],correctanswer:'a'},
-    {points: 600,questions:'what is the 600??',choices:['a6','b','c'],correctanswer:'a'},
-    {points: 600,questions:'what is the 600/600??',choices:['a7','b','c'],correctanswer:'a'}
+
+const questions = [
+    {
+        "Bahrain":[
+    {points: 200,questions1:'what is the 200??',choices:['a2','b2','c2'],correctanswer:'a2'},
+    {points: 200,questions1:'what is the 200/200??',choices:['a3','b3','c3'],correctanswer:'a'},
+    {points: 400,questions1:'what is the 400??',choices:['a4','b','c'],correctanswer:'a'},
+    {points: 400,questions1:'what is the 400/400??',choices:['a5','b','c'],correctanswer:'a'},
+    {points: 600,questions1:'what is the 600??',choices:['a6','b','c'],correctanswer:'a'},
+    {points: 600,questions1:'what is the 600/600??',choices:['a7','b','c'],correctanswer:'a'}
+        ]
+
+    },
+    {
+        "Bahrain Malls":[
+    {points: 200,questions1:'what is the 200??',choices:['a2','b2','c2'],correctanswer:'a2'},
+    {points: 200,questions1:'what is the 200/200??',choices:['a3','b3','c3'],correctanswer:'a'},
+    {points: 400,questions1:'what is the 400??',choices:['a4','b','c'],correctanswer:'a'},
+    {points: 400,questions1:'what is the 400/400??',choices:['a5','b','c'],correctanswer:'a'},
+    {points: 600,questions1:'what is the 600??',choices:['a6','b','c'],correctanswer:'a'},
+    {points: 600,questions1:'what is the 600/600??',choices:['a7','b','c'],correctanswer:'a'}
+
+        ]
+    },
+    {
+        "Bahrain First":[
+    {points: 200,questions1:'what is the 200??',choices:['a2','b2','c2'],correctanswer:'a2'},
+    {points: 200,questions1:'what is the 200/200??',choices:['a3','b3','c3'],correctanswer:'a'},
+    {points: 400,questions1:'what is the 400??',choices:['a4','b','c'],correctanswer:'a'},
+    {points: 400,questions1:'what is the 400/400??',choices:['a5','b','c'],correctanswer:'a'},
+    {points: 600,questions1:'what is the 600??',choices:['a6','b','c'],correctanswer:'a'},
+    {points: 600,questions1:'what is the 600/600??',choices:['a7','b','c'],correctanswer:'a'}
+
+        ]
+    },
+    {
+        "Bahrain Slogans":[
+    {points: 200,questions1:'what is the 200??',choices:['a2','b2','c2'],correctanswer:'a2'},
+    {points: 200,questions1:'what is the 200/200??',choices:['a3','b3','c3'],correctanswer:'a'},
+    {points: 400,questions1:'what is the 400??',choices:['a4','b','c'],correctanswer:'a'},
+    {points: 400,questions1:'what is the 400/400??',choices:['a5','b','c'],correctanswer:'a'},
+    {points: 600,questions1:'what is the 600??',choices:['a6','b','c'],correctanswer:'a'},
+    {points: 600,questions1:'what is the 600/600??',choices:['a7','b','c'],correctanswer:'a'}
+
+        ]
+    }
 
 ]
-
 /*---------------------------- Variables (state) ----------------------------*/
 let selectCategories=[]
 let currentteam=1
@@ -32,7 +70,7 @@ const playbuttonElement=document.querySelector('.play-button button')
 //question
 const gameElement=document.querySelector('.game')
 const questionElement=document.querySelector('.question')
-const choicesElement=document.querySelectorAll('.choices button')
+const choicesElement=document.querySelector('.choices button')
 const bottombar2Element=document.querySelector('.bottom-bar2')
 //to disapear everything
 const backgroundElement = document.querySelector('.background')
@@ -45,6 +83,11 @@ const navbarElement=document.querySelector('.navbar2')
 const teamsElement=document.querySelectorAll('.teams')
 const team1Element=document.querySelector('#team1')
 const team2Element=document.querySelector('#team2')
+//answer
+const answer1Element=document.querySelector('#answer1')
+const answer2Element=document.querySelector('#answer2')
+const answer3Element=document.querySelector('#answer3')
+
 
 
 
@@ -82,7 +125,7 @@ function board(){
 
     // click the question function
     function questionClick(event){
-        qClick=event.target
+        qClick=event.target.textContent
         let clicknumber
         if(event.target.textContent=='200'||event.target.textContent=='400'||event.target.textContent=='600'){
             clicknumber=Number(qClick.textContent)
@@ -90,9 +133,20 @@ function board(){
 
 
         }
-        const matchquestion=questions.find((onequestion) => onequestion.points==clicknumber)
-        console.log(matchquestion)
-        questionElement.textContent = matchquestion.questions
+        //question appears
+        // const matchquestion=questions.find((onequestion) => onequestion.points==clicknumber)
+        // console.log(matchquestion)
+        // questionElement.textContent = matchquestion.questions1
+
+       for (let macthquestion of questions){
+        console.log(questions[0].questions1) 
+        console.log('question appears')
+        questionElement.textContent=macthquestion.questions1        
+
+        }
+
+
+
 
         for (let i=0;i<choicesElement.length;i++){
             choicesElement[i].textContent=matchquestion.choices[i]
@@ -134,6 +188,18 @@ function teamTurn(){
     }
 }
 
+// answer function
+function answerClick(event){
+    let answer=event.target.textContent
+    if(answer==questions.correctanswer){
+        event.target.style.backgroundColor='#008000 '
+    }else{
+                event.target.style.backgroundColor='#FF0000  '
+    }
+
+
+}
+
 
 
 
@@ -156,6 +222,7 @@ bahrainq4Element.forEach(function(card) {
 
 playbuttonElement.addEventListener('click', board)
 cardscontainerElement.addEventListener('click', questionClick)
+choicesElement.addEventListener('click',answerClick)
 
 
 

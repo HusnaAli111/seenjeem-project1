@@ -523,4 +523,13 @@ font-family:'britannic';
 .bottom-bar2{
     display: none;
 }
+.navbar2 {
+    background: #EFEFEF;
+    padding: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+        display: none;
 
+
+}

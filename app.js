@@ -34,7 +34,12 @@ const questionElement=document.querySelector('.question')
 const choicesElement=document.querySelectorAll('.choices button')
 const bottombar2Element=document.querySelector('.bottom-bar2')
 //to disapear everything
-
+const backgroundElement = document.querySelector('.background')
+const selectCategoryElement = document.querySelector('.select-category')
+const sidebarElement = document.querySelector('.sidebar')
+const bahrainElement = document.querySelectorAll('.bahrain')
+const playButtonElement = document.querySelector('.play-button')
+const navbarElement=document.querySelector('.navbar2')
 
 
 
@@ -86,15 +91,27 @@ function board(){
         for (let i=0;i<choicesElement.length;i++){
             choicesElement[i].textContent=matchquestion.choices[i]
         }
-        
-        gameElement.style.display='flex'
-        bottombar2Element.style.display = 'flex'
-        questionElement.style.display='flex'
 
+//hide the whole page when we click on the question
+    backgroundElement.style.display = 'none'
+    selectCategoryElement.style.display = 'none'
+    sidebarElement.style.display = 'none'
+    playButtonElement.style.display = 'none'
 
-
-
+    for(let i = 0; i < bahrainElement.length; i++){
+        bahrainElement[i].style.display = 'none'
     }
+//hide the whole page when we click on the question
+    cardscontainerElement.style.display = 'none'
+    bottombarElement.style.display = 'none'
+    // shows the question page
+
+    gameElement.style.display = 'flex'
+    bottombar2Element.style.display = 'flex'
+    navbarElement.style.display='flex'
+} 
+
+
 
 
 

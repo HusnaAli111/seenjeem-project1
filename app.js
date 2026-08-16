@@ -12,6 +12,7 @@ const questions=[
 
 /*---------------------------- Variables (state) ----------------------------*/
 let selectCategories=[]
+let currentteam=1
 
 
 
@@ -40,6 +41,11 @@ const sidebarElement = document.querySelector('.sidebar')
 const bahrainElement = document.querySelectorAll('.bahrain')
 const playButtonElement = document.querySelector('.play-button')
 const navbarElement=document.querySelector('.navbar2')
+//teams turn
+const teamsElement=document.querySelectorAll('.teams')
+const team1Element=document.querySelector('#team1')
+const team2Element=document.querySelector('#team2')
+
 
 
 
@@ -108,8 +114,25 @@ function board(){
 
     gameElement.style.display = 'flex'
     bottombar2Element.style.display = 'flex'
-    navbarElement.style.display='flex'
+
+    teamTurn()
+
 } 
+//team turn function
+function teamTurn(){
+    if(currentteam==1){
+        team1Element.style.backgroundColor='#ff8c42'
+        team2Element.style.backgroundColor='#f3f3f3'
+        currentteam=2
+
+
+    }else{
+        team1Element.style.backgroundColor='#f3f3f3'
+        team2Element.style.backgroundColor='#ff8c42'
+        currentteam=1
+
+    }
+}
 
 
 
@@ -130,8 +153,11 @@ bahrainq3Element.forEach(function(card) {
 bahrainq4Element.forEach(function(card) {
     card.addEventListener('click', clickplay)
 })
+
 playbuttonElement.addEventListener('click', board)
 cardscontainerElement.addEventListener('click', questionClick)
+
+
 
 
 

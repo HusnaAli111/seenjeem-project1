@@ -1,12 +1,12 @@
 console.log('test seenjeem')
 /*-------------------------------- Constants --------------------------------*/
 const questions=[
-    {points: 200,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'},
-    {points: 200,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'},
-    {points: 400,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'},
-    {points: 400,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'},
-    {points: 600,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'},
-    {points: 600,questions:'what is the ??',choices:['a','b','c'],correctanswer:'a'}
+    {points: 200,questions:'what is the 200??',choices:['a2','b2','c2'],correctanswer:'a'},
+    {points: 200,questions:'what is the 200/200??',choices:['a3','b3','c3'],correctanswer:'a'},
+    {points: 400,questions:'what is the 400??',choices:['a4','b','c'],correctanswer:'a'},
+    {points: 400,questions:'what is the 400/400??',choices:['a5','b','c'],correctanswer:'a'},
+    {points: 600,questions:'what is the 600??',choices:['a6','b','c'],correctanswer:'a'},
+    {points: 600,questions:'what is the 600/600??',choices:['a7','b','c'],correctanswer:'a'}
 
 ]
 
@@ -23,11 +23,20 @@ const bahrainq4Element = document.querySelectorAll('.bahrain-q4')
 
 const selectedCategoryElement = document.querySelector('#selectedCategories')
 
-// now for the board
+//  for the board
 const categorynameElement=document.querySelectorAll('.category-name')
 const cardscontainerElement=document.querySelector('.cards-container')
 const bottombarElement=document.querySelector('.bottom-bar')
 const playbuttonElement=document.querySelector('.play-button button')
+//question
+const gameElement=document.querySelector('.game')
+const questionElement=document.querySelector('.question')
+const choicesElement=document.querySelectorAll('.choices button')
+const bottombar2Element=document.querySelector('.bottom-bar2')
+//to disapear everything
+
+
+
 
 /*-------------------------------- Functions --------------------------------*/
 function clickplay(event){
@@ -59,7 +68,33 @@ function board(){
     bottombarElement.style.display = 'flex'
    
     }
+
     // click the question function
+    function questionClick(event){
+        qClick=event.target
+        let clicknumber
+        if(event.target.textContent=='200'||event.target.textContent=='400'||event.target.textContent=='600'){
+            clicknumber=Number(qClick.textContent)
+            console.log('point clicked')
+
+
+        }
+        const matchquestion=questions.find((onequestion) => onequestion.points==clicknumber)
+        console.log(matchquestion)
+        questionElement.textContent = matchquestion.questions
+
+        for (let i=0;i<choicesElement.length;i++){
+            choicesElement[i].textContent=matchquestion.choices[i]
+        }
+        
+        gameElement.style.display='flex'
+        bottombar2Element.style.display = 'flex'
+        questionElement.style.display='flex'
+
+
+
+
+    }
 
 
 
@@ -79,7 +114,7 @@ bahrainq4Element.forEach(function(card) {
     card.addEventListener('click', clickplay)
 })
 playbuttonElement.addEventListener('click', board)
-
+cardscontainerElement.addEventListener('click', questionClick)
 
 
 

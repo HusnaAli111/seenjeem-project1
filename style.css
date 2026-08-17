@@ -84,12 +84,15 @@ body {
 }
 
 .sidebar {
-    height: 100px;
+    display: inline-block;
+    height: 220px;
     width: 100px;
-    position: absolute;
+    position: fixed;
     right: 0;
-    background-color: aqua;
+    top: 30%;
+    background-color: #e5e5e5;
 }
+
 
 .background h1 {
     color: white;
@@ -613,5 +616,9 @@ body {
 .score-popup button:hover{
     background-color: #A90000;
     color: white;
+}
+.win-popup{
+    display: none;
+    background-color: #A90000;
 }
 

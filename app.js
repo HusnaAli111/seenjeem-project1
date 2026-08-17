@@ -1,4 +1,7 @@
-console.log('test seenjeem')
+setTimeout(()=>{
+    console.log('test seenjeem')
+
+},1000)
 /*-------------------------------- Constants --------------------------------*/
 
 const questions = [
@@ -66,6 +69,10 @@ let currentQuestion = null
 let team1Score = 0
 let team2Score = 0
 
+//count how many question has been answered
+let questionsCount = 0
+
+
 
 /*------------------------ Cached Element References ------------------------*/
 const bahrainq1Element = document.querySelectorAll('.bahrain-q1')
@@ -118,6 +125,8 @@ const boardTeam2ScoreElement = document.querySelector('#board-team2-score')
 //show the team turn in the board
 const boardTeam1Element = document.querySelector('.team-1')
 const boardTeam2Element = document.querySelector('.team-2')
+//show the winner in the end of the game
+const winpopupElement=document.querySelector('#winPopUp')
 
 
 
@@ -176,6 +185,7 @@ function questionClick(event) {
                 //this to save the question for the choices section
                 currentQuestion = seenjeem
                 questionElement.textContent = seenjeem.questions1
+                
                 //display the choices
                 answer1Element.textContent = seenjeem.choices[0]
                 answer2Element.textContent = seenjeem.choices[1]
@@ -248,6 +258,7 @@ function questionClick(event) {
                 break
 
             }
+            
         }
     }
     //bahrain slogans question
@@ -291,17 +302,17 @@ function questionClick(event) {
 
 
     // Hide board
-    // backgroundElement.style.display = 'none'
-    // selectCategoryElement.style.display = 'none'
-    // sidebarElement.style.display = 'none'
-    // playButtonElement.style.display = 'none'
+    backgroundElement.style.display = 'none'
+    selectCategoryElement.style.display = 'none'
+    sidebarElement.style.display = 'none'
+    playButtonElement.style.display = 'none'
 
-    // for (let i = 0; i < bahrainElement.length; i++) {
-    //     bahrainElement[i].style.display = 'none'
-    // }
+    for (let i = 0; i < bahrainElement.length; i++) {
+        bahrainElement[i].style.display = 'none'
+    }
 
-    // cardscontainerElement.style.display = 'none'
-    // bottombarElement.style.display = 'none'
+    cardscontainerElement.style.display = 'none'
+    bottombarElement.style.display = 'none'
 
     // Show question page
     gameElement.style.display = 'flex'
@@ -371,6 +382,7 @@ function answerClick(event) {
 
 
 }
+//go back to the board when points are distributed
 
 //score team1 function
 function giveToTeam1() {
@@ -378,9 +390,13 @@ function giveToTeam1() {
     team1ScoreElement.textContent = team1Score
     //this is in the boad shows
     boardTeam1ScoreElement.textContent = team1Score
+    //count the question
+    questionsCount++
     scorePopupElement.style.display = 'none'
 
     teamTurn()
+    gameEnd()
+
 
 }
 
@@ -390,18 +406,49 @@ function givetoTeam2() {
     team2ScoreElement.textContent = team2Score
     // this is in the board shows
     boardTeam2ScoreElement.textContent = team2Score
+    //count the question
+    questionsCount++
     scorePopupElement.style.display = 'none'
 
     teamTurn()
+    gameEnd()
 
 }
 
 //score for no one
 function giveNoOne() {
+    //count the question
+    questionsCount++
     scorePopupElement.style.display = 'none'
 
     teamTurn()
+    gameEnd()
 }
+
+//winning check
+function winnercheck(){
+
+   if (team1Score > team2Score) {
+        winpopupElement.textContent = 'The Winner is Team 1!'
+        winpopupElement.style.display = 'flex'
+   }
+   else if (team2Score>team1){
+    winpopupElement.textContent='the winner is team 2!'
+    winpopupElement.style.display = 'flex'
+   }
+   else{
+    winpopupElement.textContent='its a tie!'
+    winpopupElement.style.display = 'flex'
+   }
+
+}
+//check how mnay question answered so the game end
+function gameEnd(){
+    if(questionsCount==24){
+         winnercheck()
+    }
+}
+
 
 
 
@@ -437,6 +484,9 @@ category4Element.addEventListener('click', questionClick)
 giveTeam1Element.addEventListener('click', giveToTeam1)
 giveTeam2Element.addEventListener('click', givetoTeam2)
 giveNoOneElement.addEventListener('click', giveNoOne)
+
+//wining
+winpopupElement.addEventListener('click',winnercheck)
 
 
 

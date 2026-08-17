@@ -55,7 +55,7 @@ const questions = [
 ]
 /*---------------------------- Variables (state) ----------------------------*/
 let selectCategories = []
-let currentteam = 1
+let currentteam = 2
 //for question
 let currentBaharain = []
 let currentMalls = []
@@ -338,7 +338,6 @@ function questionClick(event) {
     gameElement.style.display = 'flex'
     bottombar2Element.style.display = 'flex'
 
-    teamTurn()
 
 }
 
@@ -365,8 +364,15 @@ function teamTurn() {
         currentteam = 1
 
     }
-}
 
+}
+      //this for the begging is makes the team1 orange and team2 white
+        team1Element.style.backgroundColor = '#ff8c42'
+        team2Element.style.backgroundColor = '#f3f3f3'
+
+        // this is for the board so it shows the color
+        boardTeam1Element.style.backgroundColor = '#ff8c42'
+        boardTeam2Element.style.backgroundColor = '#f3f3f3'
 // answer function
 function answerClick(event) {
     let answer = event.target.textContent
@@ -378,11 +384,24 @@ function answerClick(event) {
         event.target.style.backgroundColor = '#FF0000  '
     }
     //this is for popup after its correct
+    setTimeout(()=>{
     scorePopupElement.style.display = 'flex'
+
+},2000)
+    
 
 
 }
 //go back to the board when points are distributed
+function backToBoard(){
+    // hide the question page
+    gameElement.style.display = 'none'
+    bottombar2Element.style.display = 'none'
+
+    // show the  board
+    cardscontainerElement.style.display = 'flex'
+    bottombarElement.style.display = 'flex'
+}
 
 //score team1 function
 function giveToTeam1() {
@@ -396,7 +415,7 @@ function giveToTeam1() {
 
     teamTurn()
     gameEnd()
-
+    backToBoard()
 
 }
 
@@ -412,6 +431,8 @@ function givetoTeam2() {
 
     teamTurn()
     gameEnd()
+    backToBoard()
+
 
 }
 
@@ -423,6 +444,8 @@ function giveNoOne() {
 
     teamTurn()
     gameEnd()
+    backToBoard()
+
 }
 
 //winning check

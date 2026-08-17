@@ -105,13 +105,19 @@ const category1Element = document.querySelector('#category1')
 const category2Element = document.querySelector('#category2')
 const category3Element = document.querySelector('#category3')
 const category4Element = document.querySelector('#category4')
-//score section
+//score section in the question section
 const scorePopupElement = document.querySelector('#scorePopup')
 const giveTeam1Element = document.querySelector('#giveTeam1')
 const giveTeam2Element = document.querySelector('#giveTeam2')
 const giveNoOneElement = document.querySelector('#giveNoOne')
 const team1ScoreElement = document.querySelector('#team1-score2')
 const team2ScoreElement = document.querySelector('#team2-score2')
+//score section for the board section
+const boardTeam1ScoreElement = document.querySelector('#board-team1-score')
+const boardTeam2ScoreElement = document.querySelector('#board-team2-score')
+//show the team turn in the board
+const boardTeam1Element = document.querySelector('.team-1')
+const boardTeam2Element = document.querySelector('.team-2')
 
 
 
@@ -331,12 +337,20 @@ function teamTurn() {
     if (currentteam == 1) {
         team1Element.style.backgroundColor = '#ff8c42'
         team2Element.style.backgroundColor = '#f3f3f3'
+
+        // this is for the board so it shows the color
+        boardTeam1Element.style.backgroundColor = '#ff8c42'
+        boardTeam2Element.style.backgroundColor = '#f3f3f3'
         currentteam = 2
 
 
     } else {
         team1Element.style.backgroundColor = '#f3f3f3'
         team2Element.style.backgroundColor = '#ff8c42'
+
+        // this is for the board so it shows the color
+        boardTeam1Element.style.backgroundColor = '#f3f3f3'
+        boardTeam2Element.style.backgroundColor = '#ff8c42'
         currentteam = 1
 
     }
@@ -347,36 +361,46 @@ function answerClick(event) {
     let answer = event.target.textContent
     if (answer == currentQuestion.correctanswer) {
         event.target.style.backgroundColor = '#008000 '
-        
+
 
     } else {
         event.target.style.backgroundColor = '#FF0000  '
     }
     //this is for popup after its correct
-        scorePopupElement.style.display = 'flex'
+    scorePopupElement.style.display = 'flex'
 
 
 }
 
 //score team1 function
-function giveToTeam1(){
-        team1Score = team1Score + currentQuestion.points
-        team1ScoreElement.textContent=team1Score
-        scorePopupElement.style.display = 'none'
+function giveToTeam1() {
+    team1Score = team1Score + currentQuestion.points
+    team1ScoreElement.textContent = team1Score
+    //this is in the boad shows
+    boardTeam1ScoreElement.textContent = team1Score
+    scorePopupElement.style.display = 'none'
+
+    teamTurn()
 
 }
 
 //score team2 function
-function givetoTeam2(){
-    team2Score=team2Score+currentQuestion.points
-    team2ScoreElement.textContent=team2Score
+function givetoTeam2() {
+    team2Score = team2Score + currentQuestion.points
+    team2ScoreElement.textContent = team2Score
+    // this is in the board shows
+    boardTeam2ScoreElement.textContent = team2Score
     scorePopupElement.style.display = 'none'
+
+    teamTurn()
 
 }
 
 //score for no one
-function giveNoOne(){
+function giveNoOne() {
     scorePopupElement.style.display = 'none'
+
+    teamTurn()
 }
 
 

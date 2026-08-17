@@ -62,6 +62,10 @@ let currentSlogans = []
 // to save the current question
 let currentQuestion = null
 
+//save the team score
+let team1Score = 0
+let team2Score = 0
+
 
 /*------------------------ Cached Element References ------------------------*/
 const bahrainq1Element = document.querySelectorAll('.bahrain-q1')
@@ -101,6 +105,13 @@ const category1Element = document.querySelector('#category1')
 const category2Element = document.querySelector('#category2')
 const category3Element = document.querySelector('#category3')
 const category4Element = document.querySelector('#category4')
+//score section
+const scorePopupElement = document.querySelector('#scorePopup')
+const giveTeam1Element = document.querySelector('#giveTeam1')
+const giveTeam2Element = document.querySelector('#giveTeam2')
+const giveNoOneElement = document.querySelector('#giveNoOne')
+const team1ScoreElement = document.querySelector('#team1-score2')
+const team2ScoreElement = document.querySelector('#team2-score2')
 
 
 
@@ -140,6 +151,7 @@ function board() {
 
 // click the question function
 function questionClick(event) {
+    scorePopupElement.style.display = 'none'
     let qClick = Number(event.target.textContent)
     console.log('point clicked')
     //bahrain question
@@ -312,6 +324,8 @@ function questionClick(event) {
     teamTurn()
 
 }
+
+
 //team turn function
 function teamTurn() {
     if (currentteam == 1) {
@@ -333,11 +347,36 @@ function answerClick(event) {
     let answer = event.target.textContent
     if (answer == currentQuestion.correctanswer) {
         event.target.style.backgroundColor = '#008000 '
+        
+
     } else {
         event.target.style.backgroundColor = '#FF0000  '
     }
+    //this is for popup after its correct
+        scorePopupElement.style.display = 'flex'
 
 
+}
+
+//score team1 function
+function giveToTeam1(){
+        team1Score = team1Score + currentQuestion.points
+        team1ScoreElement.textContent=team1Score
+        scorePopupElement.style.display = 'none'
+
+}
+
+//score team2 function
+function givetoTeam2(){
+    team2Score=team2Score+currentQuestion.points
+    team2ScoreElement.textContent=team2Score
+    scorePopupElement.style.display = 'none'
+
+}
+
+//score for no one
+function giveNoOne(){
+    scorePopupElement.style.display = 'none'
 }
 
 
@@ -369,6 +408,11 @@ category1Element.addEventListener('click', questionClick)
 category2Element.addEventListener('click', questionClick)
 category3Element.addEventListener('click', questionClick)
 category4Element.addEventListener('click', questionClick)
+
+//score
+giveTeam1Element.addEventListener('click', giveToTeam1)
+giveTeam2Element.addEventListener('click', givetoTeam2)
+giveNoOneElement.addEventListener('click', giveNoOne)
 
 
 

@@ -2,6 +2,7 @@ body {
     margin: 0;
     /* removes any default spacing that the browser does */
 }
+
 .navbar {
     background: #EFEFEF;
     padding: 16px;
@@ -10,36 +11,38 @@ body {
     align-items: center;
 
 }
-.background{
-     height: 550px;
 
-    background: linear-gradient(
-        90deg,
-        #ff1e1e 0%,
-        #efb46b 100%
-    );
+.background {
+    height: 550px;
+
+    background: linear-gradient(90deg,
+            #ff1e1e 0%,
+            #efb46b 100%);
     /* this blends two color with each other starts from the left which is #ff1e1e which start solid with 0% till the yellow and the 90deg so it sarts from the left to the right */
 
     border-bottom-left-radius: 50% 15%;
     border-bottom-right-radius: 50% 15%;
 }
-.logo{
+
+.logo {
     /* background-color: orange; */
     width: 55px;
     /* height: 20%; */
-    
+
 
 }
-.logo img{
+
+.logo img {
     width: 100%;
     height: 10%;
 
 }
+
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-    
+
 }
 
 .nav-links li {
@@ -52,151 +55,167 @@ body {
     font-size: 20px;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: 'britannic';
-    
+
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     color: white;
     background-color: #A90000;
     border-radius: 30px;
     padding: 10px;
 }
 
-.hamburger{
+.hamburger {
     display: none;
 }
+
 /* when the screen goes below the this number app;y the styling */
 
 
-@media(max-width: 400px){
-    .nav-links{
+@media(max-width: 400px) {
+    .nav-links {
         display: none;
         padding-left: 50px;
     }
 
-    .hamburger{
+    .hamburger {
         display: block;
     }
 }
-.sidebar{
-    height:100px;
-     width:100px;
-      position: absolute; 
-      right:0; 
-      background-color: aqua;
+
+.sidebar {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    background-color: aqua;
 }
-.background h1{
+
+.background h1 {
     color: white;
     font-family: 'britannic';
     font-size: 50px;
     padding-left: 450px;
     padding-top: 130px;
 }
-.background p{
+
+.background p {
     color: white;
     font-size: 20px;
     padding-left: 350px;
 }
-.start-button{
-   padding: 10px;
-   border-radius: 30px;
-   border: none;
-   color: black;
-   font-size: 18px;
-   font-family:'britannic' ;
+
+.start-button {
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    color: black;
+    font-size: 18px;
+    font-family: 'britannic';
 
     margin-left: 540px;
     margin-top: 30px;
-    
+
 }
-.start-button:hover{
+
+.start-button:hover {
     color: white;
     background-color: #A90000;
-;
+    ;
 }
-.select-category h1{
+
+.select-category h1 {
     font-family: 'britannic';
     font-size: 50px;
     padding-left: 450px;
     padding-top: 130px;
 
 }
-.select-category p{
+
+.select-category p {
     font-size: 20px;
     padding-left: 350px;
 
 }
 
-.bahrain-category{
-    background-color:#F4F4F4;
+.bahrain-category {
+    background-color: #F4F4F4;
     width: 90%;
     height: 450px;
     /* height: 100%; */
     /* padding-left: 350px; */
     margin-left: 70px;
     border-radius: 10px;
-    
+
 }
-.bahrain-cards{
+
+.bahrain-cards {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     gap: 10px;
 }
-.bahrain-category button{
+
+.bahrain-category button {
     color: white;
-   padding: 10px;
-   border-radius: 30px;
-   border: none;
-   font-size: 28px;
-   font-family:'britannic' ;
-   background-color: #FF8140;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    font-size: 28px;
+    font-family: 'britannic';
+    background-color: #FF8140;
 
     margin-left: 470px;
     margin-top: 30px;
     margin-bottom: 30px;
-    
-    
+
+
 
 }
-.bahrain-q1{
+
+.bahrain-q1 {
     width: 170px;
     height: 250px;
     border: solid black 2px;
     border-radius: 10px;
-    background-color:#FF7546;
-    
-    
+    background-color: #FF7546;
+
+
 }
-.bahrain-q1 img{
+
+.bahrain-q1 img {
     /* border: 2px black; */
     border-radius: 10px;
-    width:170px;
+    width: 170px;
     height: 180px;
     /* padding-left: 30px; */
 }
-.bahrain-q1-h2{
+
+.bahrain-q1-h2 {
     font-family: 'britannic';
     background-color: #FF7546;
     color: white;
     padding-left: 20px;
     font-size: 14px;
 }
-.bahrain-q2{
+
+.bahrain-q2 {
     width: 170px;
     height: 250px;
     border: solid black 2px;
     border-radius: 10px;
     background-color: #FF7546;
-    
+
 }
-.bahrain-q2 img{
+
+.bahrain-q2 img {
     /* border: 2px black; */
     border-radius: 10px;
-    width:170px;
+    width: 170px;
     height: 180px;
     /* padding-left: 30px; */
 }
-.bahrain-q2-h2{
+
+.bahrain-q2-h2 {
     font-family: 'britannic';
     background-color: #FF7546;
     color: white;
@@ -204,22 +223,25 @@ body {
     font-size: 14px;
 
 }
-.bahrain-q3{
+
+.bahrain-q3 {
     width: 170px;
     height: 250px;
     border: solid black 2px;
     border-radius: 10px;
     background-color: #FF7546;
-    
+
 }
-.bahrain-q3 img{
+
+.bahrain-q3 img {
     /* border: 2px black; */
     border-radius: 10px;
-    width:170px;
+    width: 170px;
     height: 180px;
     /* padding-left: 30px; */
 }
-.bahrain-q3-h2{
+
+.bahrain-q3-h2 {
     font-family: 'britannic';
     background-color: #FF7546;
     color: white;
@@ -227,22 +249,25 @@ body {
     font-size: 14px;
 
 }
-.bahrain-q4{
+
+.bahrain-q4 {
     width: 170px;
     height: 250px;
     border: solid black 2px;
     border-radius: 10px;
     background-color: #FF7546;
-    
+
 }
-.bahrain-q4 img{
+
+.bahrain-q4 img {
     /* border: 2px black; */
     border-radius: 10px;
-    width:170px;
+    width: 170px;
     height: 180px;
     /* padding-left: 30px; */
 }
-.bahrain-q4-h2{
+
+.bahrain-q4-h2 {
     font-family: 'britannic';
     background-color: #FF7546;
     color: white;
@@ -250,46 +275,46 @@ body {
     font-size: 14px;
 
 }
-.play-button button{
-   padding: 20px;
-   border-radius: 30px;
-   border: none;
-   color: white;
-    background: linear-gradient(
-        90deg,
-        #ff1e1e 0%,
-        #efb46b 100%
-    );
+
+.play-button button {
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background: linear-gradient(90deg,
+            #ff1e1e 0%,
+            #efb46b 100%);
     margin-left: 550px;
     font-size: 18px;
-   font-family:'britannic' ; 
-   
-   
+    font-family: 'britannic';
+
+
 }
-.play-button button:hover{
+
+.play-button button:hover {
     background-color: #A90000;
     background: #A90000;
 }
+
 /* //////////////////////////////////////////////////////////////////////////// */
 /* board page */
 
 .navbar-board {
-    background: linear-gradient(
-        90deg,
-        #ff1e1e 0%,
-        #efb46b 100%
-    );
+    background: linear-gradient(90deg,
+            #ff1e1e 0%,
+            #efb46b 100%);
     padding: 16px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
 }
+
 .nav-links-board {
     list-style: none;
     display: flex;
     gap: 20px;
-    
+
 }
 
 .nav-links-board li {
@@ -302,24 +327,25 @@ body {
     font-size: 20px;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: 'britannic';
-    
+
 }
 
-.nav-links-board a:hover{
+.nav-links-board a:hover {
     color: black;
     background-color: white;
     border-radius: 30px;
     padding: 10px;
 }
-.cards-container{
+
+.cards-container {
     display: flex;
     gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.question-card{
-    background-color:#F4F4F4;
+.question-card {
+    background-color: #F4F4F4;
     width: 550px;
     height: 200px;
     padding: 22px;
@@ -329,44 +355,52 @@ body {
     justify-content: center;
     border-radius: 20px;
 }
-.mid-pic img{
+
+.mid-pic img {
     width: 120px;
     border-radius: 20px;
 }
-.left-side{
+
+.left-side {
     display: flex;
     flex-direction: column;
     gap: 13px;
 }
-.right-side{
+
+.right-side {
     display: flex;
     flex-direction: column;
     gap: 13px;
 }
-.left-side button{
-   width: 60px;
-   height: 30px;
-   border: black solid 2px;
-   border-radius: 150px;
-   font-family: 'britannic';
-}
-.right-side button{
+
+.left-side button {
     width: 60px;
-   height: 30px;
-   border: black solid 2px;
-   border-radius: 150px;
-   font-family: 'britannic';
+    height: 30px;
+    border: black solid 2px;
+    border-radius: 150px;
+    font-family: 'britannic';
 }
-.left-side button:hover{
+
+.right-side button {
+    width: 60px;
+    height: 30px;
+    border: black solid 2px;
+    border-radius: 150px;
+    font-family: 'britannic';
+}
+
+.left-side button:hover {
     color: white;
     background-color: #A90000;
-    
+
 }
-.right-side button:hover{
+
+.right-side button:hover {
     color: white;
     background-color: #A90000;
 }
-.bottom-bar{
+
+.bottom-bar {
     width: 100%;
     height: 20%;
     background-color: #EFEFEF;
@@ -374,17 +408,19 @@ body {
     justify-content: space-between;
     margin-top: 60px;
 }
-.team-1{
+
+.team-1 {
     font-family: 'britannic';
     margin-left: 120px;
-    
+
 }
 
-.team-2{
+.team-2 {
     font-family: 'britannic';
     margin-right: 120px;
 }
-.team-1 p{
+
+.team-1 p {
     border-bottom: 2px solid black;
     padding-bottom: 8px;
 }
@@ -394,6 +430,7 @@ body {
     padding-bottom: 8px;
 
 }
+
 .score-box {
     width: 70px;
     height: 50px;
@@ -404,13 +441,16 @@ body {
     align-items: center;
     background-color: white;
 }
+
 /* let the board hidden  */
-.cards-container{
+.cards-container {
     display: none;
 }
-.bottom-bar{
+
+.bottom-bar {
     display: none;
 }
+
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* question page */
 .game {
@@ -450,9 +490,10 @@ body {
     border-radius: 12px;
     background: #e5e5e5;
 }
+
 .choices button:hover {
-   color: white;
-   background-color: #A90000;
+    color: white;
+    background-color: #A90000;
 }
 
 .teams {
@@ -468,12 +509,12 @@ body {
 }
 
 
-.answer{
-font-family:'britannic';
+.answer {
+    font-family: 'britannic';
 
 }
 
-.bottom-bar2{
+.bottom-bar2 {
     width: 100%;
     height: 20%;
     background-color: #EFEFEF;
@@ -481,17 +522,19 @@ font-family:'britannic';
     justify-content: space-between;
     margin-top: 60px;
 }
-.team-11{
+
+.team-11 {
     font-family: 'britannic';
     margin-left: 120px;
-    
+
 }
 
-.team-22{
+.team-22 {
     font-family: 'britannic';
     margin-right: 120px;
 }
-.team-11 p{
+
+.team-11 p {
     border-bottom: 2px solid black;
     padding-bottom: 8px;
 }
@@ -501,6 +544,7 @@ font-family:'britannic';
     padding-bottom: 8px;
 
 }
+
 .score-box2 {
     width: 70px;
     height: 50px;
@@ -511,15 +555,19 @@ font-family:'britannic';
     align-items: center;
     background-color: white;
 }
-.game{
+
+.game {
     display: none;
 }
-.answer{
+
+.answer {
     display: none;
 }
-.bottom-bar2{
+
+.bottom-bar2 {
     display: none;
 }
+
 /* .navbar2 {
     background: #EFEFEF;
     padding: 16px;
@@ -530,3 +578,40 @@ font-family:'britannic';
 
 
 } */
+/* popup */
+.score-popup {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    padding-left: 80px;
+    /* margin-left: 300px; */
+    width: 30%;
+    background: linear-gradient(90deg,
+            #ff1e1e 0%,
+            #efb46b 100%);
+    color: white;
+    font-family:'britannic' ;
+    position: fixed;
+    top: 50px;
+    left: 320px;
+}
+
+.score-popup button {
+
+    color: #A90000;
+    padding: 15px 20px;
+    margin-top: 15px;
+    background-color: white;
+    color: #A90000;
+    border: none;
+    border-radius: 12px;
+    font-family: 'britannic';
+    font-size: 16px;
+    font-weight: bold;
+}
+.score-popup button:hover{
+    background-color: #A90000;
+    color: white;
+}
+

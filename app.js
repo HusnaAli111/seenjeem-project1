@@ -6,7 +6,7 @@ const questions = [
         "Bahrain": [
 
             { points: 200, questions1: 'what is the 200??', choices: ['a2', 'b2', 'c2'], correctanswer: 'a2' },
-            { points: 400, questions1: 'what is the 400??', choices: ['a4', 'b', 'c'], correctanswer: 'a' },
+            { points: 400, questions1: 'what is the 400??', choices: ['a4', 'b', 'c'], correctanswer: 'c' },
             { points: 600, questions1: 'what is the 600??', choices: ['a6', 'b', 'c'], correctanswer: 'a' },
             { points: 200, questions1: 'what is the 200/200??', choices: ['a3', 'b3', 'c3'], correctanswer: 'a' },
             { points: 400, questions1: 'what is the 400/400??', choices: ['a5', 'b', 'c'], correctanswer: 'a' },
@@ -17,8 +17,8 @@ const questions = [
     },
     {
         "Bahrain Malls": [
-            { points: 200, questions1: 'what is the bahrain??', choices: ['a2', 'b2', 'c2'], correctanswer: 'a2' },
-            { points: 200, questions1: 'what is the bharain20222??', choices: ['a3', 'b3', 'c3'], correctanswer: 'a' },
+            { points: 200, questions1: 'what is the bahrain??', choices: ['a2', 'housenum', 'c2'], correctanswer: 'housenum' },
+            { points: 200, questions1: 'what is the bharain20222??', choices: ['a3', 'create', 'c3'], correctanswer: 'create' },
             { points: 400, questions1: 'what is the 400??', choices: ['a4', 'b', 'c'], correctanswer: 'a' },
             { points: 400, questions1: 'what is the 400/400??', choices: ['a5', 'b', 'c'], correctanswer: 'a' },
             { points: 600, questions1: 'what is the 600??', choices: ['a6', 'b', 'c'], correctanswer: 'a' },
@@ -60,7 +60,7 @@ let currentFirst = []
 let currentSlogans = []
 
 // to save the current question
-
+let currentQuestion = null
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -79,7 +79,7 @@ const playbuttonElement = document.querySelector('.play-button button')
 //question
 const gameElement = document.querySelector('.game')
 const questionElement = document.querySelector('.question')
-const choicesElement = document.querySelector('.choices button')
+const choicesElement = document.querySelectorAll('.choices button')
 const bottombar2Element = document.querySelector('.bottom-bar2')
 //to disapear everything
 const backgroundElement = document.querySelector('.background')
@@ -155,11 +155,18 @@ function questionClick(event) {
             if (currentBaharain[i].points == qClick) {
                 //display the question
                 let seenjeem = currentBaharain[i]
+                //this to save the question for the choices section
+                currentQuestion = seenjeem
                 questionElement.textContent = seenjeem.questions1
                 //display the choices
                 answer1Element.textContent = seenjeem.choices[0]
                 answer2Element.textContent = seenjeem.choices[1]
                 answer3Element.textContent = seenjeem.choices[2]
+
+                //this for when you choose another question it goes to the white color again
+                answer1Element.style.backgroundColor = '#f3f3f3'
+                answer2Element.style.backgroundColor = '#f3f3f3'
+                answer3Element.style.backgroundColor = '#f3f3f3'
                 currentBaharain.splice(i, 1)
                 break
             }
@@ -177,11 +184,18 @@ function questionClick(event) {
         for (let i = 0; i < currentMalls.length; i++) {
             if (currentMalls[i].points == qClick) {
                 let seenjeem = currentMalls[i]
+                //this to save the question for the choices section
+                currentQuestion = seenjeem
                 questionElement.textContent = seenjeem.questions1
                 //display the choices
                 answer1Element.textContent = seenjeem.choices[0]
                 answer2Element.textContent = seenjeem.choices[1]
                 answer3Element.textContent = seenjeem.choices[2]
+
+                //this for when you choose another question it goes to the white color again
+                answer1Element.style.backgroundColor = '#f3f3f3'
+                answer2Element.style.backgroundColor = '#f3f3f3'
+                answer3Element.style.backgroundColor = '#f3f3f3'
                 currentMalls.splice(i, 1)
                 break
 
@@ -200,11 +214,18 @@ function questionClick(event) {
         for (let i = 0; i < currentFirst.length; i++) {
             if (currentFirst[i].points == qClick) {
                 let seenjeem = currentFirst[i]
+                //this to save the question for the choices section
+                currentQuestion = seenjeem
                 questionElement.textContent = seenjeem.questions1
                 //display the choices
                 answer1Element.textContent = seenjeem.choices[0]
                 answer2Element.textContent = seenjeem.choices[1]
                 answer3Element.textContent = seenjeem.choices[2]
+
+                //this for when you choose another question it goes to the white color again
+                answer1Element.style.backgroundColor = '#f3f3f3'
+                answer2Element.style.backgroundColor = '#f3f3f3'
+                answer3Element.style.backgroundColor = '#f3f3f3'
                 currentFirst.splice(i, 1)
                 break
 
@@ -223,11 +244,18 @@ function questionClick(event) {
         for (let i = 0; i < currentSlogans.length; i++) {
             if (currentSlogans[i].points == qClick) {
                 let seenjeem = currentSlogans[i]
+                //this to save the question for the choices section
+                currentQuestion = seenjeem
                 questionElement.textContent = seenjeem.questions1
                 //display the choices
                 answer1Element.textContent = seenjeem.choices[0]
                 answer2Element.textContent = seenjeem.choices[1]
                 answer3Element.textContent = seenjeem.choices[2]
+
+                //this for when you choose another question it goes to the white color again
+                answer1Element.style.backgroundColor = '#f3f3f3'
+                answer2Element.style.backgroundColor = '#f3f3f3'
+                answer3Element.style.backgroundColor = '#f3f3f3'
                 currentSlogans.splice(i, 1)
                 break
 
@@ -303,7 +331,7 @@ function teamTurn() {
 // answer function
 function answerClick(event) {
     let answer = event.target.textContent
-    if (answer == cu.correctanswer) {
+    if (answer == currentQuestion.correctanswer) {
         event.target.style.backgroundColor = '#008000 '
     } else {
         event.target.style.backgroundColor = '#FF0000  '
@@ -334,8 +362,9 @@ bahrainq4Element.forEach(function (card) {
 
 playbuttonElement.addEventListener('click', board)
 // cardscontainerElement.addEventListener('click', questionClick)
-choicesElement.addEventListener('click', answerClick)
-//question to appear
+choicesElement.forEach(function (choice) {
+    choice.addEventListener('click', answerClick)
+})//question to appear
 category1Element.addEventListener('click', questionClick)
 category2Element.addEventListener('click', questionClick)
 category3Element.addEventListener('click', questionClick)

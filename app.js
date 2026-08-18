@@ -1,205 +1,206 @@
-setTimeout(()=>{
+setTimeout(() => {
     console.log('test seenjeem')
 
-},1000)
+}, 1000)
 /*-------------------------------- Constants --------------------------------*/
 
 const questions = [
     {
         "Bahrain": [
 
-    {
-        points: 200,
-        questions1: 'What is the capital city of Bahrain?',
-        choices: ['Manama', 'Riffa', 'Muharraq'],
-        correctanswer: 'Manama'
+            {
+                points: 200,
+                questions1: 'What is the capital city of Bahrain?',
+                choices: ['Manama', 'Riffa', 'Muharraq'],
+                correctanswer: 'Manama'
+            },
+
+            {
+                points: 200,
+                questions1: 'What is the currency of Bahrain?',
+                choices: ['Bahraini Dinar', 'Saudi Riyal', 'UAE Dirham'],
+                correctanswer: 'Bahraini Dinar'
+            },
+
+            {
+                points: 400,
+                questions1: 'How many islands make up the Kingdom of Bahrain?',
+                choices: ['More than 30', 'More than 100', 'More than 300'],
+                correctanswer: 'More than 30'
+            },
+
+            {
+                points: 400,
+                questions1: 'Which sea surrounds Bahrain?',
+                choices: ['Arabian Gulf', 'Red Sea', 'Mediterranean Sea'],
+                correctanswer: 'Arabian Gulf'
+            },
+
+            {
+                points: 600,
+                questions1: 'What is the name of Bahrain’s famous ancient burial mounds?',
+                choices: ['Dilmun Burial Mounds', 'Pearl Mounds', 'Bahrain Hills'],
+                correctanswer: 'Dilmun Burial Mounds'
+            },
+
+            {
+                points: 600,
+                questions1: 'What is Bahrain’s national animal?',
+                choices: ['Arabian Oryx', 'Falcon', 'Gazelle'],
+                correctanswer: 'Arabian Oryx'
+            }
+
+        ]
+
     },
-
     {
-        points: 200,
-        questions1: 'What is the currency of Bahrain?',
-        choices: ['Bahraini Dinar', 'Saudi Riyal', 'UAE Dirham'],
-        correctanswer: 'Bahraini Dinar'
-    },
+        "Bahrain Malls": [
 
-    {
-        points: 400,
-        questions1: 'How many islands make up the Kingdom of Bahrain?',
-        choices: ['More than 30', 'More than 100', 'More than 300'],
-        correctanswer: 'More than 30'
-    },
+            {
+                points: 200,
+                questions1: 'Which mall is located in Seef District?',
+                choices: ['Seef Mall', 'Dragon City', 'Moda Mall'],
+                correctanswer: 'Seef Mall'
+            },
 
-    {
-        points: 400,
-        questions1: 'Which sea surrounds Bahrain?',
-        choices: ['Arabian Gulf', 'Red Sea', 'Mediterranean Sea'],
-        correctanswer: 'Arabian Gulf'
-    },
+            {
+                points: 200,
+                questions1: 'Which mall is famous for its large aquarium and indoor attractions?',
+                choices: ['City Centre Bahrain', 'Seef Mall', 'Enma Mall'],
+                correctanswer: 'City Centre Bahrain'
+            },
 
-    {
-        points: 600,
-        questions1: 'What is the name of Bahrain’s famous ancient burial mounds?',
-        choices: ['Dilmun Burial Mounds', 'Pearl Mounds', 'Bahrain Hills'],
-        correctanswer: 'Dilmun Burial Mounds'
-    },
+            {
+                points: 400,
+                questions1: 'Which mall is located near Bahrain International Airport?',
+                choices: ['Marassi Galleria', 'City Centre Bahrain', 'Seef Mall'],
+                correctanswer: 'Marassi Galleria'
+            },
 
-    {
-        points: 600,
-        questions1: 'What is Bahrain’s national animal?',
-        choices: ['Arabian Oryx', 'Falcon', 'Gazelle'],
-        correctanswer: 'Arabian Oryx'
-    }
+            {
+                points: 400,
+                questions1: 'Which mall is known for its large IKEA store nearby?',
+                choices: ['Bahrain Mall', 'The Avenues', 'Moda Mall'],
+                correctanswer: 'Bahrain Mall'
+            },
 
-]
+            {
+                points: 600,
+                questions1: 'Which Bahrain mall is located on the waterfront in Manama?',
+                choices: ['The Avenues', 'Seef Mall', 'Enma Mall'],
+                correctanswer: 'The Avenues'
+            },
 
-    },
-    {
-       "Bahrain Malls": [
+            {
+                points: 600,
+                questions1: 'Which mall is located in Diyar Al Muharraq?',
+                choices: ['Marassi Galleria', 'Moda Mall', 'Bahrain Mall'],
+                correctanswer: 'Marassi Galleria'
+            }
 
-    {
-        points: 200,
-        questions1: 'Which mall is located in Seef District?',
-        choices: ['Seef Mall', 'Dragon City', 'Moda Mall'],
-        correctanswer: 'Seef Mall'
-    },
-
-    {
-        points: 200,
-        questions1: 'Which mall is famous for its large aquarium and indoor attractions?',
-        choices: ['City Centre Bahrain', 'Seef Mall', 'Enma Mall'],
-        correctanswer: 'City Centre Bahrain'
-    },
-
-    {
-        points: 400,
-        questions1: 'Which mall is located near Bahrain International Airport?',
-        choices: ['Marassi Galleria', 'City Centre Bahrain', 'Seef Mall'],
-        correctanswer: 'Marassi Galleria'
-    },
-
-    {
-        points: 400,
-        questions1: 'Which mall is known for its large IKEA store nearby?',
-        choices: ['Bahrain Mall', 'The Avenues', 'Moda Mall'],
-        correctanswer: 'Bahrain Mall'
-    },
-
-    {
-        points: 600,
-        questions1: 'Which Bahrain mall is located on the waterfront in Manama?',
-        choices: ['The Avenues', 'Seef Mall', 'Enma Mall'],
-        correctanswer: 'The Avenues'
-    },
-
-    {
-        points: 600,
-        questions1: 'Which mall is located in Diyar Al Muharraq?',
-        choices: ['Marassi Galleria', 'Moda Mall', 'Bahrain Mall'],
-        correctanswer: 'Marassi Galleria'
-    }
-
-]
+        ]
     },
     {
         "Bahrain First": [
 
-    {
-        points: 200,
-        questions1: 'What was Bahrain the first country in the Gulf to discover commercially?',
-        choices: ['Oil', 'Gold', 'Coal'],
-        correctanswer: 'Oil'
-    },
+            {
+                points: 200,
+                questions1: 'What was Bahrain the first country in the Gulf to discover commercially?',
+                choices: ['Oil', 'Gold', 'Coal'],
+                correctanswer: 'Oil'
+            },
 
-    {
-        points: 200,
-        questions1: 'Bahrain was the first Gulf country to have which type of school?',
-        choices: ['Modern public school', 'Military school', 'Medical school'],
-        correctanswer: 'Modern public school'
-    },
+            {
+                points: 200,
+                questions1: 'Bahrain was the first Gulf country to have which type of school?',
+                choices: ['Modern public school', 'Military school', 'Medical school'],
+                correctanswer: 'Modern public school'
+            },
 
-    {
-        points: 400,
-        questions1: 'What was the name of Bahrain’s first modern school for boys?',
-        choices: ['Al-Hidaya Al-Khalifia School', 'Isa Town School', 'Manama School'],
-        correctanswer: 'Al-Hidaya Al-Khalifia School'
-    },
+            {
+                points: 400,
+                questions1: 'What was the name of Bahrain’s first modern school for boys?',
+                choices: ['Al-Hidaya Al-Khalifia School', 'Isa Town School', 'Manama School'],
+                correctanswer: 'Al-Hidaya Al-Khalifia School'
+            },
 
-    {
-        points: 400,
-        questions1: 'Bahrain was the first Gulf country to establish a modern system of what?',
-        choices: ['Education', 'Railways', 'Metro'],
-        correctanswer: 'Education'
-    },
+            {
+                points: 400,
+                questions1: 'Bahrain was the first Gulf country to establish a modern system of what?',
+                choices: ['Education', 'Railways', 'Metro'],
+                correctanswer: 'Education'
+            },
 
-    {
-        points: 600,
-        questions1: 'In which year was oil first discovered in Bahrain?',
-        choices: ['1932', '1945', '1952'],
-        correctanswer: '1932'
-    },
+            {
+                points: 600,
+                questions1: 'In which year was oil first discovered in Bahrain?',
+                choices: ['1932', '1945', '1952'],
+                correctanswer: '1932'
+            },
 
-    {
-        points: 600,
-        questions1: 'Bahrain was the first Gulf country where oil was discovered in which location?',
-        choices: ['Jebel Al Dukhan', 'Jebel Al Noor', 'Jebel Hafeet'],
-        correctanswer: 'Jebel Al Dukhan'
-    }
+            {
+                points: 600,
+                questions1: 'Bahrain was the first Gulf country where oil was discovered in which location?',
+                choices: ['Jebel Al Dukhan', 'Jebel Al Noor', 'Jebel Hafeet'],
+                correctanswer: 'Jebel Al Dukhan'
+            }
 
-]
+        ]
     },
     {
         "Bahrain Slogans": [
 
-    {
-        points: 200,
-        questions1: 'Which phrase is commonly associated with Bahrain as a tourism destination?',
-        choices: ['Ours. Yours. Bahrain.', 'The Heart of Arabia', 'Land of the Seven Seas'],
-        correctanswer: 'Ours. Yours. Bahrain.'
-    },
+            {
+                points: 200,
+                questions1: 'Which phrase is commonly associated with Bahrain as a tourism destination?',
+                choices: ['Ours. Yours. Bahrain.', 'The Heart of Arabia', 'Land of the Seven Seas'],
+                correctanswer: 'Ours. Yours. Bahrain.'
+            },
 
-    {
-        points: 200,
-        questions1: 'Which phrase describes Bahrain as an island nation?',
-        choices: ['Island of Pearls', 'Island of Gold', 'Island of Palms'],
-        correctanswer: 'Island of Pearls'
-    },
+            {
+                points: 200,
+                questions1: 'Which phrase describes Bahrain as an island nation?',
+                choices: ['Island of Pearls', 'Island of Gold', 'Island of Palms'],
+                correctanswer: 'Island of Pearls'
+            },
 
-    {
-        points: 400,
-        questions1: 'Which word is strongly associated with Bahrain’s history and culture?',
-        choices: ['Pearls', 'Snow', 'Volcanoes'],
-        correctanswer: 'Pearls'
-    },
+            {
+                points: 400,
+                questions1: 'Which word is strongly associated with Bahrain’s history and culture?',
+                choices: ['Pearls', 'Snow', 'Volcanoes'],
+                correctanswer: 'Pearls'
+            },
 
-    {
-        points: 400,
-        questions1: 'Bahrain is often described as the heart of which region?',
-        choices: ['The Gulf', 'Europe', 'North Africa'],
-        correctanswer: 'The Gulf'
-    },
+            {
+                points: 400,
+                questions1: 'Bahrain is often described as the heart of which region?',
+                choices: ['The Gulf', 'Europe', 'North Africa'],
+                correctanswer: 'The Gulf'
+            },
 
-    {
-        points: 600,
-        questions1: 'Which ancient civilization is strongly connected with Bahrain’s history?',
-        choices: ['Dilmun', 'Roman', 'Mayan'],
-        correctanswer: 'Dilmun'
-    },
+            {
+                points: 600,
+                questions1: 'Which ancient civilization is strongly connected with Bahrain’s history?',
+                choices: ['Dilmun', 'Roman', 'Mayan'],
+                correctanswer: 'Dilmun'
+            },
 
-    {
-        points: 600,
-        questions1: 'Which traditional industry is Bahrain especially famous for?',
-        choices: ['Pearling', 'Tea farming', 'Silk production'],
-        correctanswer: 'Pearling'
-    }
+            {
+                points: 600,
+                questions1: 'Which traditional industry is Bahrain especially famous for?',
+                choices: ['Pearling', 'Tea farming', 'Silk production'],
+                correctanswer: 'Pearling'
+            }
 
-]
+        ]
     }
 
 ]
 /*---------------------------- Variables (state) ----------------------------*/
+// This stores the categories that the player selects.
 let selectCategories = []
 let currentteam = 2
-//for question
+//for question that are availble cause then we will do the splice and remove the first thing that have been clicked
 let currentBaharain = []
 let currentMalls = []
 let currentFirst = []
@@ -270,7 +271,7 @@ const boardTeam2ScoreElement = document.querySelector('#board-team2-score')
 const boardTeam1Element = document.querySelector('.team-1')
 const boardTeam2Element = document.querySelector('.team-2')
 //show the winner in the end of the game
-const winpopupElement=document.querySelector('#winPopUp')
+const winpopupElement = document.querySelector('#winPopUp')
 
 
 
@@ -278,6 +279,7 @@ const winpopupElement=document.querySelector('#winPopUp')
 
 
 /*-------------------------------- Functions --------------------------------*/
+//this function is for when  the player is selecting categories
 function clickplay(event) {
     cardclick = event.target
     console.log(cardclick)
@@ -292,18 +294,21 @@ function clickplay(event) {
     selectCategories.push(event.target.children[1].children[0].textContent)
     console.log(selectCategories)
     selectedCategoryElement.textContent = selectCategories.join('\n')
-sidebarElement.style.display = 'block'
+    sidebarElement.style.display = 'block'
 
 }
+//this function runs when the start palying is clicked
 function board() {
+    //did the player choose 4 categories
     if (selectCategories.length < 4) {
         console.log('4 only')
         return
     }
+    //put the selected categories into the board
     for (let i = 0; i < categorynameElement.length; i++) {
         categorynameElement[i].textContent = selectCategories[i]
     }
-     // hide the category  page
+    // hide the category  page
     backgroundElement.style.display = 'none'
     selectCategoryElement.style.display = 'none'
     sidebarElement.style.display = 'none'
@@ -323,12 +328,12 @@ function board() {
 // click the question function
 function questionClick(event) {
     answer1Element.style.backgroundColor = '#e5e5e5'
-answer2Element.style.backgroundColor = '#e5e5e5'
-answer3Element.style.backgroundColor = '#e5e5e5'
+    answer2Element.style.backgroundColor = '#e5e5e5'
+    answer3Element.style.backgroundColor = '#e5e5e5'
     scorePopupElement.style.display = 'none'
     let qClick = Number(event.target.textContent)
     console.log('point clicked')
-    //bahrain question
+    //bahrain question and pushing it into the array that we created
     if (event.currentTarget.id == 'category1') {
         if (currentBaharain.length == 0) {
             for (let i = 0; i < questions[0].Bahrain.length; i++) {
@@ -336,7 +341,7 @@ answer3Element.style.backgroundColor = '#e5e5e5'
             }
         }
         //bahrain click
-        //find thequestion with same selected point
+        //find the question with same selected point
         for (let i = 0; i < currentBaharain.length; i++) {
             if (currentBaharain[i].points == qClick) {
                 //display the question
@@ -344,7 +349,7 @@ answer3Element.style.backgroundColor = '#e5e5e5'
                 //this to save the question for the choices section
                 currentQuestion = seenjeem
                 questionElement.textContent = seenjeem.questions1
-                
+
                 //display the choices
                 answer1Element.textContent = seenjeem.choices[0]
                 answer2Element.textContent = seenjeem.choices[1]
@@ -417,7 +422,7 @@ answer3Element.style.backgroundColor = '#e5e5e5'
                 break
 
             }
-            
+
         }
     }
     //bahrain slogans question
@@ -450,15 +455,6 @@ answer3Element.style.backgroundColor = '#e5e5e5'
             }
         }
     }
-
-
-
-
-
-
-
-
-
 
     // Hide board
     backgroundElement.style.display = 'none'
@@ -525,55 +521,55 @@ function teamTurn() {
     }
 
 }
-      //this for the begging is makes the team1 orange and team2 white
-        team1Element.style.backgroundColor = '#ff8c42'
-        team2Element.style.backgroundColor = '#f3f3f3'
+//this for the begging is makes the team1 orange and team2 white
+team1Element.style.backgroundColor = '#ff8c42'
+team2Element.style.backgroundColor = '#f3f3f3'
 
-        // this is for the board so it shows the color
-        boardTeam1Element.style.backgroundColor = '#ff8c42'
-        boardTeam2Element.style.backgroundColor = '#f3f3f3'
+// this is for the board so it shows the color
+boardTeam1Element.style.backgroundColor = '#ff8c42'
+boardTeam2Element.style.backgroundColor = '#f3f3f3'
 
-        
+
 // answer function
 function answerClick(event) {
     let answer = event.target.textContent
     if (answer == currentQuestion.correctanswer) {
         event.target.style.backgroundColor = '#008000 '
-        
+
 
 
     } else {
 
         event.target.style.backgroundColor = '#FF0000  '
-        
+
     }
-    //this is for popup after its wrong
-     setTimeout(() => {
+    //this is when its wrong it display the correct answer with green
+    setTimeout(() => {
 
-            if (answer1Element.textContent == currentQuestion.correctanswer) {
-                answer1Element.style.backgroundColor = 'green'
-            }
+        if (answer1Element.textContent == currentQuestion.correctanswer) {
+            answer1Element.style.backgroundColor = 'green'
+        }
 
-            if (answer2Element.textContent == currentQuestion.correctanswer) {
-                answer2Element.style.backgroundColor = 'green'
-            }
+        if (answer2Element.textContent == currentQuestion.correctanswer) {
+            answer2Element.style.backgroundColor = 'green'
+        }
 
-            if (answer3Element.textContent == currentQuestion.correctanswer) {
-                answer3Element.style.backgroundColor = 'green'
-            }
-            setTimeout(() => {
+        if (answer3Element.textContent == currentQuestion.correctanswer) {
+            answer3Element.style.backgroundColor = 'green'
+        }
+        setTimeout(() => {
 
             scorePopupElement.style.display = 'flex'
-             }, 2000)
+        }, 2000)
 
-        }, 1000)
-    
-    
+    }, 1000)
+
+
 
 
 }
 //go back to the board when points are distributed
-function backToBoard(){
+function backToBoard() {
     // hide the question page
     gameElement.style.display = 'none'
     bottombar2Element.style.display = 'none'
@@ -629,26 +625,26 @@ function giveNoOne() {
 }
 
 //winning check
-function winnercheck(){
+function winnercheck() {
 
-   if (team1Score > team2Score) {
+    if (team1Score > team2Score) {
         winpopupElement.textContent = 'The Winner is Team 1!'
         winpopupElement.style.display = 'flex'
-   }
-   else if (team2Score>team1Score){
-    winpopupElement.textContent='the winner is team 2!'
-    winpopupElement.style.display = 'flex'
-   }
-   else{
-    winpopupElement.textContent='its a tie!'
-    winpopupElement.style.display = 'flex'
-   }
+    }
+    else if (team2Score > team1Score) {
+        winpopupElement.textContent = 'the winner is team 2!'
+        winpopupElement.style.display = 'flex'
+    }
+    else {
+        winpopupElement.textContent = 'its a tie!'
+        winpopupElement.style.display = 'flex'
+    }
 
 }
 //check how mnay question answered so the game end
-function gameEnd(){
-    if(questionsCount==24){
-         winnercheck()
+function gameEnd() {
+    if (questionsCount == 24) {
+        winnercheck()
     }
 }
 

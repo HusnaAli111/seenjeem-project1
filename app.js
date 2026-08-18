@@ -322,6 +322,9 @@ function board() {
 
 // click the question function
 function questionClick(event) {
+    answer1Element.style.backgroundColor = '#e5e5e5'
+answer2Element.style.backgroundColor = '#e5e5e5'
+answer3Element.style.backgroundColor = '#e5e5e5'
     scorePopupElement.style.display = 'none'
     let qClick = Number(event.target.textContent)
     console.log('point clicked')
@@ -348,9 +351,9 @@ function questionClick(event) {
                 answer3Element.textContent = seenjeem.choices[2]
 
                 //this for when you choose another question it goes to the white color again
-                answer1Element.style.backgroundColor = '#f3f3f3'
-                answer2Element.style.backgroundColor = '#f3f3f3'
-                answer3Element.style.backgroundColor = '#f3f3f3'
+                answer1Element.classList.add('choices')
+                answer2Element.classList.add('choices')
+                answer3Element.classList.add('choices')
                 currentBaharain.splice(i, 1)
                 break
             }
@@ -377,9 +380,9 @@ function questionClick(event) {
                 answer3Element.textContent = seenjeem.choices[2]
 
                 //this for when you choose another question it goes to the white color again
-                answer1Element.style.backgroundColor = '#f3f3f3'
-                answer2Element.style.backgroundColor = '#f3f3f3'
-                answer3Element.style.backgroundColor = '#f3f3f3'
+                answer1Element.classList.add('choices')
+                answer2Element.classList.add('choices')
+                answer3Element.classList.add('choices')
                 currentMalls.splice(i, 1)
                 break
 
@@ -407,9 +410,9 @@ function questionClick(event) {
                 answer3Element.textContent = seenjeem.choices[2]
 
                 //this for when you choose another question it goes to the white color again
-                answer1Element.style.backgroundColor = '#f3f3f3'
-                answer2Element.style.backgroundColor = '#f3f3f3'
-                answer3Element.style.backgroundColor = '#f3f3f3'
+                answer1Element.classList.add('choices')
+                answer2Element.classList.add('choices')
+                answer3Element.classList.add('choices')
                 currentFirst.splice(i, 1)
                 break
 
@@ -438,9 +441,9 @@ function questionClick(event) {
                 answer3Element.textContent = seenjeem.choices[2]
 
                 //this for when you choose another question it goes to the white color again
-                answer1Element.style.backgroundColor = '#f3f3f3'
-                answer2Element.style.backgroundColor = '#f3f3f3'
-                answer3Element.style.backgroundColor = '#f3f3f3'
+                answer1Element.classList.add('choices')
+                answer2Element.classList.add('choices')
+                answer3Element.classList.add('choices')
                 currentSlogans.splice(i, 1)
                 break
 
@@ -529,6 +532,8 @@ function teamTurn() {
         // this is for the board so it shows the color
         boardTeam1Element.style.backgroundColor = '#ff8c42'
         boardTeam2Element.style.backgroundColor = '#f3f3f3'
+
+        
 // answer function
 function answerClick(event) {
     let answer = event.target.textContent
@@ -537,13 +542,31 @@ function answerClick(event) {
 
 
     } else {
-        event.target.style.backgroundColor = '#FF0000  '
-    }
-    //this is for popup after its correct
-    setTimeout(()=>{
-    scorePopupElement.style.display = 'flex'
 
-},2000)
+        event.target.style.backgroundColor = '#FF0000  '
+        
+    }
+    //this is for popup after its wrong
+     setTimeout(() => {
+
+            if (answer1Element.textContent == currentQuestion.correctanswer) {
+                answer1Element.style.backgroundColor = 'green'
+            }
+
+            if (answer2Element.textContent == currentQuestion.correctanswer) {
+                answer2Element.style.backgroundColor = 'green'
+            }
+
+            if (answer3Element.textContent == currentQuestion.correctanswer) {
+                answer3Element.style.backgroundColor = 'green'
+            }
+            setTimeout(() => {
+
+            scorePopupElement.style.display = 'flex'
+             }, 2000)
+
+        }, 1000)
+    
     
 
 

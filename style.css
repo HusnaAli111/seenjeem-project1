@@ -481,6 +481,7 @@ body {
 .question {
     font-size: 30px;
     margin-bottom: 40px;
+    font-family: 'britannic';
 }
 
 .choices {
@@ -491,16 +492,25 @@ body {
 }
 
 .choices button {
-    padding: 15px;
+     width: 100%;
+    padding: 30px;
     border: none;
     border-radius: 12px;
     background: #e5e5e5;
+    text-align: center;
+    margin: 0;
+    font-size: 15px;
+    
 }
 
 .choices button:hover {
-    color: white;
-    background-color: #A90000;
+    color: #A90000;
+    font-weight: bold;
 }
+
+/* button.correct-answer{
+    background-color: green;
+} */
 
 .teams {
     width: 200px;

@@ -8,48 +8,191 @@ const questions = [
     {
         "Bahrain": [
 
-            { points: 200, questions1: 'what is the 200??', choices: ['a2', 'b2', 'c2'], correctanswer: 'a2' },
-            { points: 400, questions1: 'what is the 400??', choices: ['a4', 'b', 'c'], correctanswer: 'c' },
-            { points: 600, questions1: 'what is the 600??', choices: ['a6', 'b', 'c'], correctanswer: 'a' },
-            { points: 200, questions1: 'what is the 200/200??', choices: ['a3', 'b3', 'c3'], correctanswer: 'a' },
-            { points: 400, questions1: 'what is the 400/400??', choices: ['a5', 'b', 'c'], correctanswer: 'a' },
-            { points: 600, questions1: 'what is the 600/600??', choices: ['a7', 'b', 'c'], correctanswer: 'a' }
+    {
+        points: 200,
+        questions1: 'What is the capital city of Bahrain?',
+        choices: ['Manama', 'Riffa', 'Muharraq'],
+        correctanswer: 'Manama'
+    },
 
-        ]
+    {
+        points: 200,
+        questions1: 'What is the currency of Bahrain?',
+        choices: ['Bahraini Dinar', 'Saudi Riyal', 'UAE Dirham'],
+        correctanswer: 'Bahraini Dinar'
+    },
+
+    {
+        points: 400,
+        questions1: 'How many islands make up the Kingdom of Bahrain?',
+        choices: ['More than 30', 'More than 100', 'More than 300'],
+        correctanswer: 'More than 30'
+    },
+
+    {
+        points: 400,
+        questions1: 'Which sea surrounds Bahrain?',
+        choices: ['Arabian Gulf', 'Red Sea', 'Mediterranean Sea'],
+        correctanswer: 'Arabian Gulf'
+    },
+
+    {
+        points: 600,
+        questions1: 'What is the name of Bahrain’s famous ancient burial mounds?',
+        choices: ['Dilmun Burial Mounds', 'Pearl Mounds', 'Bahrain Hills'],
+        correctanswer: 'Dilmun Burial Mounds'
+    },
+
+    {
+        points: 600,
+        questions1: 'What is Bahrain’s national animal?',
+        choices: ['Arabian Oryx', 'Falcon', 'Gazelle'],
+        correctanswer: 'Arabian Oryx'
+    }
+
+]
 
     },
     {
-        "Bahrain Malls": [
-            { points: 200, questions1: 'what is the bahrain??', choices: ['a2', 'housenum', 'c2'], correctanswer: 'housenum' },
-            { points: 200, questions1: 'what is the bharain20222??', choices: ['a3', 'create', 'c3'], correctanswer: 'create' },
-            { points: 400, questions1: 'what is the 400??', choices: ['a4', 'b', 'c'], correctanswer: 'a' },
-            { points: 400, questions1: 'what is the 400/400??', choices: ['a5', 'b', 'c'], correctanswer: 'a' },
-            { points: 600, questions1: 'what is the 600??', choices: ['a6', 'b', 'c'], correctanswer: 'a' },
-            { points: 600, questions1: 'what is the 600/600??', choices: ['a7', 'b', 'c'], correctanswer: 'a' }
+       "Bahrain Malls": [
 
-        ]
+    {
+        points: 200,
+        questions1: 'Which mall is located in Seef District?',
+        choices: ['Seef Mall', 'Dragon City', 'Moda Mall'],
+        correctanswer: 'Seef Mall'
+    },
+
+    {
+        points: 200,
+        questions1: 'Which mall is famous for its large aquarium and indoor attractions?',
+        choices: ['City Centre Bahrain', 'Seef Mall', 'Enma Mall'],
+        correctanswer: 'City Centre Bahrain'
+    },
+
+    {
+        points: 400,
+        questions1: 'Which mall is located near Bahrain International Airport?',
+        choices: ['Marassi Galleria', 'City Centre Bahrain', 'Seef Mall'],
+        correctanswer: 'Marassi Galleria'
+    },
+
+    {
+        points: 400,
+        questions1: 'Which mall is known for its large IKEA store nearby?',
+        choices: ['Bahrain Mall', 'The Avenues', 'Moda Mall'],
+        correctanswer: 'Bahrain Mall'
+    },
+
+    {
+        points: 600,
+        questions1: 'Which Bahrain mall is located on the waterfront in Manama?',
+        choices: ['The Avenues', 'Seef Mall', 'Enma Mall'],
+        correctanswer: 'The Avenues'
+    },
+
+    {
+        points: 600,
+        questions1: 'Which mall is located in Diyar Al Muharraq?',
+        choices: ['Marassi Galleria', 'Moda Mall', 'Bahrain Mall'],
+        correctanswer: 'Marassi Galleria'
+    }
+
+]
     },
     {
         "Bahrain First": [
-            { points: 200, questions1: 'what is the 200??', choices: ['a2', 'b2', 'c2'], correctanswer: 'a2' },
-            { points: 200, questions1: 'what is the 200/200??', choices: ['a3', 'b3', 'c3'], correctanswer: 'a' },
-            { points: 400, questions1: 'what is the 400??', choices: ['a4', 'b', 'c'], correctanswer: 'a' },
-            { points: 400, questions1: 'what is the 400/400??', choices: ['a5', 'b', 'c'], correctanswer: 'a' },
-            { points: 600, questions1: 'what is the 600??', choices: ['a6', 'b', 'c'], correctanswer: 'a' },
-            { points: 600, questions1: 'what is the 600/600??', choices: ['a7', 'b', 'c'], correctanswer: 'a' }
 
-        ]
+    {
+        points: 200,
+        questions1: 'What was Bahrain the first country in the Gulf to discover commercially?',
+        choices: ['Oil', 'Gold', 'Coal'],
+        correctanswer: 'Oil'
+    },
+
+    {
+        points: 200,
+        questions1: 'Bahrain was the first Gulf country to have which type of school?',
+        choices: ['Modern public school', 'Military school', 'Medical school'],
+        correctanswer: 'Modern public school'
+    },
+
+    {
+        points: 400,
+        questions1: 'What was the name of Bahrain’s first modern school for boys?',
+        choices: ['Al-Hidaya Al-Khalifia School', 'Isa Town School', 'Manama School'],
+        correctanswer: 'Al-Hidaya Al-Khalifia School'
+    },
+
+    {
+        points: 400,
+        questions1: 'Bahrain was the first Gulf country to establish a modern system of what?',
+        choices: ['Education', 'Railways', 'Metro'],
+        correctanswer: 'Education'
+    },
+
+    {
+        points: 600,
+        questions1: 'In which year was oil first discovered in Bahrain?',
+        choices: ['1932', '1945', '1952'],
+        correctanswer: '1932'
+    },
+
+    {
+        points: 600,
+        questions1: 'Bahrain was the first Gulf country where oil was discovered in which location?',
+        choices: ['Jebel Al Dukhan', 'Jebel Al Noor', 'Jebel Hafeet'],
+        correctanswer: 'Jebel Al Dukhan'
+    }
+
+]
     },
     {
         "Bahrain Slogans": [
-            { points: 200, questions1: 'what is the 200??', choices: ['a2', 'b2', 'c2'], correctanswer: 'a2' },
-            { points: 200, questions1: 'what is the 200/200??', choices: ['a3', 'b3', 'c3'], correctanswer: 'a' },
-            { points: 400, questions1: 'what is the 400??', choices: ['a4', 'b', 'c'], correctanswer: 'a' },
-            { points: 400, questions1: 'what is the 400/400??', choices: ['a5', 'b', 'c'], correctanswer: 'a' },
-            { points: 600, questions1: 'what is the 600??', choices: ['a6', 'b', 'c'], correctanswer: 'a' },
-            { points: 600, questions1: 'what is the 600/600??', choices: ['a7', 'b', 'c'], correctanswer: 'a' }
 
-        ]
+    {
+        points: 200,
+        questions1: 'Which phrase is commonly associated with Bahrain as a tourism destination?',
+        choices: ['Ours. Yours. Bahrain.', 'The Heart of Arabia', 'Land of the Seven Seas'],
+        correctanswer: 'Ours. Yours. Bahrain.'
+    },
+
+    {
+        points: 200,
+        questions1: 'Which phrase describes Bahrain as an island nation?',
+        choices: ['Island of Pearls', 'Island of Gold', 'Island of Palms'],
+        correctanswer: 'Island of Pearls'
+    },
+
+    {
+        points: 400,
+        questions1: 'Which word is strongly associated with Bahrain’s history and culture?',
+        choices: ['Pearls', 'Snow', 'Volcanoes'],
+        correctanswer: 'Pearls'
+    },
+
+    {
+        points: 400,
+        questions1: 'Bahrain is often described as the heart of which region?',
+        choices: ['The Gulf', 'Europe', 'North Africa'],
+        correctanswer: 'The Gulf'
+    },
+
+    {
+        points: 600,
+        questions1: 'Which ancient civilization is strongly connected with Bahrain’s history?',
+        choices: ['Dilmun', 'Roman', 'Mayan'],
+        correctanswer: 'Dilmun'
+    },
+
+    {
+        points: 600,
+        questions1: 'Which traditional industry is Bahrain especially famous for?',
+        choices: ['Pearling', 'Tea farming', 'Silk production'],
+        correctanswer: 'Pearling'
+    }
+
+]
     }
 
 ]
@@ -149,7 +292,7 @@ function clickplay(event) {
     selectCategories.push(event.target.children[1].children[0].textContent)
     console.log(selectCategories)
     selectedCategoryElement.textContent = selectCategories.join('\n')
-
+sidebarElement.style.display = 'block'
 
 }
 function board() {
@@ -160,6 +303,18 @@ function board() {
     for (let i = 0; i < categorynameElement.length; i++) {
         categorynameElement[i].textContent = selectCategories[i]
     }
+     // hide the category  page
+    backgroundElement.style.display = 'none'
+    selectCategoryElement.style.display = 'none'
+    sidebarElement.style.display = 'none'
+    playButtonElement.style.display = 'none'
+
+    // hide all the category cards
+    for (let i = 0; i < bahrainElement.length; i++) {
+        bahrainElement[i].style.display = 'none'
+    }
+
+    // show the board
     cardscontainerElement.style.display = 'flex'
     bottombarElement.style.display = 'flex'
 
@@ -468,7 +623,7 @@ function winnercheck(){
 }
 //check how mnay question answered so the game end
 function gameEnd(){
-    if(questionsCount==2){
+    if(questionsCount==24){
          winnercheck()
     }
 }

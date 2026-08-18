@@ -84,7 +84,8 @@ body {
 }
 
 .sidebar {
-    display: inline-block;
+    display: none;
+    /* display: inline-block; */
     height: 220px;
     width: 100px;
     position: fixed;
@@ -362,6 +363,7 @@ body {
 .mid-pic img {
     width: 120px;
     border-radius: 20px;
+    padding-bottom: 70px;
 }
 
 .left-side {
@@ -390,6 +392,7 @@ body {
     border: black solid 2px;
     border-radius: 150px;
     font-family: 'britannic';
+    
 }
 
 .left-side button:hover {
@@ -624,13 +627,10 @@ body {
     left: 30%;
     width: 400px;
     padding: 60px;
-
     background: linear-gradient(90deg, #ff1e1e 0%, #efb46b 100%);
     color: white;
-
     border-radius: 25px;
     text-align: center;
-
     font-family: 'britannic';
     font-size: 50px;
 

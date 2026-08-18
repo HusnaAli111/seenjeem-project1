@@ -539,6 +539,7 @@ function answerClick(event) {
     let answer = event.target.textContent
     if (answer == currentQuestion.correctanswer) {
         event.target.style.backgroundColor = '#008000 '
+        
 
 
     } else {

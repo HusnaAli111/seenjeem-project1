@@ -74,6 +74,7 @@ let questionsCount = 0
 
 
 
+
 /*------------------------ Cached Element References ------------------------*/
 const bahrainq1Element = document.querySelectorAll('.bahrain-q1')
 const bahrainq2Element = document.querySelectorAll('.bahrain-q2')
@@ -455,7 +456,7 @@ function winnercheck(){
         winpopupElement.textContent = 'The Winner is Team 1!'
         winpopupElement.style.display = 'flex'
    }
-   else if (team2Score>team1){
+   else if (team2Score>team1Score){
     winpopupElement.textContent='the winner is team 2!'
     winpopupElement.style.display = 'flex'
    }
@@ -467,7 +468,7 @@ function winnercheck(){
 }
 //check how mnay question answered so the game end
 function gameEnd(){
-    if(questionsCount==24){
+    if(questionsCount==2){
          winnercheck()
     }
 }
@@ -508,8 +509,6 @@ giveTeam1Element.addEventListener('click', giveToTeam1)
 giveTeam2Element.addEventListener('click', givetoTeam2)
 giveNoOneElement.addEventListener('click', giveNoOne)
 
-//wining
-winpopupElement.addEventListener('click',winnercheck)
 
 
 

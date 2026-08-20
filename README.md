@@ -13,3 +13,14 @@
 10. As a player, I want to choose which team receives the point.
 11. As a player , I want to see the final score at the end of the game
 12. As a player , I want to be able to reset the agem at any time
+
+## technologies used:
+1. HTML
+2. CSS
+3. JS
+
+## Description:
+SeenJeem is a fun, interactive quiz game . Players compete in teams by answering diffrent types of questions from different categories to earn points. The team with the highest score at the end wins!🏆
+
+## Screenshots
+![screenshot of the game](./pictures/game.png)
